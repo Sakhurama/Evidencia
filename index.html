@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,69 @@
 </head>
 <body>
     <h1>FORMULARIO</h1>
-    <form action="#" class="form__usuario">
+    <form action="#" class="form__usuario" autocomplete="off" validate>
         <p><b>Información del usuario</b></p>
+        <div>
+            <label for="name">Nombre del cliente:</label>
+            <input
+              type="text"
+              name="Nombre"
+              placeholder="Felipe Zamora"
+              id="name"
+              minlength="4"
+              pattern="[A-Z a-z]+" 
+              required
+            />
+            <!--pattern sirve para hacer que al validar el formulario solo pueda recibir los valores seleccionados, en este caso solamente letras.-->
+        </div> <br>
+        <div> 
+            <!--Para dejar un valor por defecto en la lista le agrego el atributo selected pero el value lo dejo vacío para que no lo tome como un valor.-->
+            <label for="id__tipo">Tipo Identificación:</label> 
+            <select name="id__tipo" id="id__tipo" required>
+              <option value="CC">CC</option>
+              <option value="TI">TI</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+        </div> <br>  
+        <div>
+            <label for="id__numero" id="id__numero">Identificación:</label>
+            <input 
+            type="number"
+            placeholder="1030542230"
+            id="id__numero"
+            name="id__numero"
+            pattern="^[0-9]+"
+            required
+            />
+          </div> <br>
+        <div>
+            <label for="correo" id="correo">E-mail:</label>
+            <input
+              type="email"
+              name="correo"
+              placeholder="Azamora@kawak.net"
+              id="correo"
+              minlength="10"
+              required
+            />
+          </div> <br>
+          <div>
+            <label for="tipo">Tipo de Solicitante:</label> 
+            <select name="tipo" id="tipo" required>
+              <option value="Docente">03-Docente</option>
+              <option value="Alumno">02-Alumno</option>
+              <option value="Aspirante">01-Aspirante</option>
+            </select>
+        </div> <br> 
+        
+        
     </form>
-    <form action="#" class="form__contacto">
+    <form action="#" class="form__contacto" autocomplete="off" validate>
         <p><b>Información de contacto</b></p>
     </form>
-    <form action="#" class="form__solicitud">
+
+
+    <form action="#" class="form__solicitud" autocomplete="off" validate>
         <p><b>Información de solicitud</b></p> 
     </form>
 </body>
