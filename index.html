@@ -66,6 +66,72 @@
     </form>
     <form action="#" class="form__contacto" autocomplete="off" validate>
         <p><b>Información de contacto</b></p>
+        <div>
+            <label for="pais">País:</label> 
+            <select name="pais" id="pais" required>
+              <option value="Colombia" selected>Colombia</option>
+              <option value="Alumno" disabled>Guatemala</option>
+              <option value="Aspirante" disabled>Islandia</option>
+            </select>
+        </div> <br>
+        <div>
+            <label for="ciudad">Ciudad:</label> 
+            <select name="ciudad" id="ciudad" required>
+              <option value="Bogota" selected>Bogotá D.C</option>
+              <option value="Medellin" disabled>Medellin</option>
+              <option value="Cali" disabled>Cali</option>
+            </select>
+        </div> <br>
+        <div>
+            <label for="ciudad">Departamento:</label> 
+            <select name="ciudad" id="ciudad" required>
+              <option value="Bogota" selected>Bogotá D.C</option>
+              <option value="Medellin" disabled>Antioquia</option>
+              <option value="Cali" disabled>Valle del Cauca</option>
+            </select>
+        </div> <br>
+        <div>
+            <label for="telefono">Teléfono:</label>
+            <input 
+            type="tel"
+            name="telefono"
+            id="telefono"
+            minlength="7"
+            maxlength="7"
+            pattern="^[0-9]+"
+            required
+            /> <!--Este pattern sirve para que el formulario solamente me valide caracteres númericos-->
+          </div> <br>
+          <div>
+            <label for="celular">Celular:</label>
+            <input 
+            type="tel"
+            name="celular"
+            id="celular"
+            minlength="10"
+            maxlength="10"
+            pattern="^[0-9]+"
+            required
+            />
+          </div> <br>
+          <div>
+            <label for="direccion">Dirección:</label>
+            <input
+              type="text"
+              name="direccion"
+              id="direccion"
+              minlength="8"
+              required
+            />
+          </div> <br> 
+          <div> 
+            <label for="contacto__fav">Medio de contacto preferido:</label> 
+            <select name="contacto__fav" id="contacto__fav" required>
+              <option value="Correo">Correo escrito</option>
+              <option value="Llamada">Llamada</option>
+              <option value="Tabla">Tabla Ouija</option>
+            </select>
+        </div> <br>
     </form>
 
 
