@@ -27,7 +27,8 @@
             <!--Para dejar un valor por defecto en la lista le agrego el atributo selected pero el value lo dejo vacío para que no lo tome como un valor.-->
             <label for="id__tipo">Tipo Identificación:</label> 
             <select name="id__tipo" id="id__tipo" required>
-              <option value="CC" selected>CC</option>
+              <option value="" selected disabled hidden>Seleccione...</option>
+              <option value="CC">CC</option>
               <option value="TI">TI</option>
               <option value="Pasaporte">Pasaporte</option>
             </select>
@@ -58,6 +59,7 @@
           <div>
             <label for="tipo">Tipo de Solicitante:</label> 
             <select name="tipo" id="tipo" required>
+              <option value disabled selected hidden>Seleccione...</option>
               <option value="Docente">03-Docente</option>
               <option value="Alumno">02-Alumno</option>
               <option value="Aspirante">01-Aspirante</option>
@@ -115,6 +117,7 @@
           <div> 
             <label for="contacto__fav">Medio de contacto preferido:</label> 
             <select name="contacto__fav" id="contacto__fav" required>
+              <option value="" disabled hidden selected>Seleccione...</option>
               <option value="Correo">Correo escrito</option>
               <option value="Llamada">Llamada</option>
               <option value="Tabla">Tabla Ouija</option>
@@ -163,6 +166,7 @@
             id="archivo"
             accept="image/png,image/jpeg"
             multiple
+            required
             />
         </div> <br>
         <button type="submit"><b>ENVIAR</b></button>
